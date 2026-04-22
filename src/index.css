@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#E5E7EB] text-[#111827] antialiased min-h-screen flex items-center justify-center p-0;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .frosted-card {
+    @apply bg-white/70 backdrop-blur-[10px] border-2 border-black p-4 mb-3 rounded-lg;
+  }
+  
+  .frosted-nav {
+    @apply bg-white/80 backdrop-blur-[15px] border-t-2 border-black;
+  }
+
+  .skill-bar {
+    @apply h-3 bg-[#E5E7EB] border border-black rounded-full overflow-hidden my-2;
+  }
+
+  .btn-primary {
+    @apply bg-black text-white px-4 py-3 rounded-lg font-bold text-center block uppercase tracking-wider transition-all active:scale-95;
+  }
+
+  .btn-outline {
+    @apply bg-white text-black border-2 border-black px-4 py-3 rounded-lg font-bold text-center block uppercase tracking-wider transition-all active:scale-95;
+  }
+}
